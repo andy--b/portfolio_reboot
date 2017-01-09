@@ -14,6 +14,9 @@ import os
 
 from portfolio_reboot.config import MYSQL_CONFIG, SECRET_KEY
 
+# Pointless, but lazily stops the linter from yelling at us
+SECRET_KEY = SECRET_KEY
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -30,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'my_profile.apps.MyProfileConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
